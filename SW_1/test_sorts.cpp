@@ -49,7 +49,7 @@ void test_isSorted() {
     int res4 = isSorted(nullptr, 0);
     std::cout << "Пустой массив: " << res4 ;
     if (res4 == 1) std::cout << " ✓" << std::endl;
-    else std::cout << " loh" << std::endl;
+    else std::cout << " loh" << std::endl; 
 
    
     int ar5[] = { 42 };

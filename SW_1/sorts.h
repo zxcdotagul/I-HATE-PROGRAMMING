@@ -5,7 +5,7 @@
 
 int getMax(const int*, int);
 void selectionSort(int* ar, int size);
-void selSt(int* ar, int size, bool ascending);
+void selSt(int* ar, int size, bool ascending); 
 
 
 #endif

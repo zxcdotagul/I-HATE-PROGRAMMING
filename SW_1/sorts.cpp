@@ -38,7 +38,7 @@ int isSorted(const int* array, unsigned int size) {
         }
         else if (array[i] < array[i - 1]) {
             ascending = false;
-        }
+        } 
     }
 
     if (ascending) return 1;

@@ -4,7 +4,7 @@
 #include <iostream>
 
 void test_selectionSort();
-int isSorted(const int* array, unsigned int size);
+int isSorted(const int* array, unsigned int size); 
 void test_isSorted();
 
 #endif
