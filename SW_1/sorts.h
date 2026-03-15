@@ -1,11 +1,11 @@
-#ifndef sorts.h
-#define sorts
+#ifndef sorts_h
+#define sorts_h
 
-#include <iostream>;
+#include <iostream>
 
-void selectionSort(int* ar, unsigned int size, bool ascending = true);
 int getMax(const int*, int);
- 
+void selectionSort(int* ar, int size);
+void selSt(int* ar, int size, bool ascending);
 
 
 #endif
