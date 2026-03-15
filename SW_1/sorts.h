@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-void selectionSort(int* ar, unsigned int size, bool ascending);
+void selectionSort(int* ar, unsigned int size, bool ascending=true);
 int getMax(const int*, int);
  
 

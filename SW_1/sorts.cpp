@@ -12,7 +12,7 @@ int getMax(const int* ar, int size) {
 }
 
 
-void selectionSort(int* ar, int size) {
+void selectionSort(int* ar,  unsigned int size,bool ascending) {
 	for (int i = 0; i < size; i++) {
 		int indMax = getMax(ar, size - i);
 		std::swap(ar[size - i - 1], ar[indMax]);
