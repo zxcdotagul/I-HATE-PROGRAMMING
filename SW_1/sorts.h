@@ -1,9 +1,9 @@
 #ifndef sorts.h
 #define sorts
 
-#include <iostream>
+#include <iostream>;
 
-void selectionSort(int* ar, unsigned int size, bool ascending=true);
+void selectionSort(int* ar, unsigned int size, bool ascending = true);
 int getMax(const int*, int);
  
 

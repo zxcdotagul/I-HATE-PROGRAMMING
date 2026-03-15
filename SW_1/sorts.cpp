@@ -7,7 +7,7 @@ int getMax(const int* ar, int size) {
 		if (ar[ind_max] < ar[i]) {
 			ind_max = i;
 		}
-	}
+	} 
 	return ind_max;
 }
 
