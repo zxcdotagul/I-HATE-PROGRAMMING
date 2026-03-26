@@ -93,3 +93,13 @@ void cycleShiftArray(int* array, int size, int N, bool left) {
     delete[] artem;
 }
 
+
+
+void setBit(int* number, int numBit) {
+    *number |= (1 << numBit);
+}
+
+void clearBit(int* number, int numBit) {
+    *number &= ~(1 << numBit);
+}
+
