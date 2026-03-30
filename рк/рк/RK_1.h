@@ -11,7 +11,7 @@ struct Fraction {
     Fraction(int numerator, int denominator);
 };
 
-
+ 
 int gcd(int a, int b);
 
 

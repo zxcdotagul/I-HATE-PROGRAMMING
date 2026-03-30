@@ -15,7 +15,7 @@ Fraction::Fraction(int numerator, int denominator) {
 }
 
 int gcd(int a, int b) {
-    a = std::abs(a);
+    a = std::abs(a); 
     b = std::abs(b);
     while (b != 0) {
         int temp = b;
