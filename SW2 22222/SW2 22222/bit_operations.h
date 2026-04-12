@@ -12,7 +12,7 @@ unsigned char getCount1Bit(int number); //< task4
 
 void cycleShiftArray(int* array, int size, int N, bool left);	//< task1 SW_3
 void setBit(int* number, int numBit); //< task2 SW_3   
-void clearBit(int* number, int numBit); //< task3 SW_3
+void clearBit(int* number, int numBit); //< task3 SW_3 
 
 #endif
 

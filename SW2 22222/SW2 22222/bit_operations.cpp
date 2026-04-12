@@ -17,3 +17,27 @@ void cycleShift(int* number, int N, int left) {
     }
     *number = num;
 }
+int getMaxBit(const int* array, int N) {
+    int maxIndex = -1;
+    int maxBits = -1;
+
+    for (int i = 0; i < N; i++) {
+        if (array[i] < 0) {
+            continue;
+        }
+        unsigned int num = array[i];
+        int bitCount = 0;
+
+        while (num != 0) {
+            bitCount += (num & 1);
+            num >>= 1;
+        }
+
+        if (bitCount > maxBits) {
+            maxBits = bitCount;
+            maxIndex = i;
+        }
+    }
+
+    return maxIndex;
+}
