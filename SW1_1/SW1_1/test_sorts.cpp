@@ -8,7 +8,7 @@ bool checkSort(const int* ar, int size) {
 			return false;
 		}
 	}
-	return true;  
+	return true;   
 
 }
 
