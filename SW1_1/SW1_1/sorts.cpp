@@ -23,4 +23,4 @@ void selSt(int* r, int s, bool a) {
         int indMax = getMax(&r[a == true ? 0 : i], s - i);
         std::swap(r[a == true ? indMax : indMax + i], r[a == true ? s - i - 1 : i]);
     }
-}
+} 

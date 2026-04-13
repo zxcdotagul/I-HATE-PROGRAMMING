@@ -3,10 +3,10 @@
 
 #include <iostream>
 
-
+   
 int getMax(const int*, int);
 void selectionSort(int* ar, int size);
-
+  
 
 void selSt(int* r, int s, bool a);
 
