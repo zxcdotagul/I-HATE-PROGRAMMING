@@ -2,7 +2,7 @@
 #define _bit_operations_h_
 
 /*#include */
-
+ 
 /*prototypde functions for tasks*/
 void swapHalfWord(unsigned int* words); //< task1
 void cycleShift(int* number, int N, int left); //< task2

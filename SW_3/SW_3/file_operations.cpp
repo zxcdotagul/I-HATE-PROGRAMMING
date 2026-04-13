@@ -28,5 +28,13 @@ void fillFile(const char* fileName, int min, int max, char delimeter, int cols, 
 
     delete[] ar;
     file.close();
+
+    std::ifstream readFile(fileName);
+    
+
+    char ch;
+    while (readFile.get(ch)) {
+        std::cout << ch;
+    }
    
 }

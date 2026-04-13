@@ -3,7 +3,7 @@
 
 void swapHalfWord(unsigned int* words) {
     *words = ((*words << 16) | (*words >> 16));
-}
+} 
 
 void cycleShift(int* number, int N, int left) {
     N = N % 32;
