@@ -31,7 +31,7 @@ int fracReduction(Fraction& frac) {
     // 0 числитель 
     if (frac._numerator == 0) {
         frac._denominator = 1;
-        return 3;
+        return 3 ;
     }
 
     int divisor = gcd(frac._numerator, frac._denominator);

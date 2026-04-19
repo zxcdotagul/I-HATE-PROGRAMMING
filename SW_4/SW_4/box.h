@@ -1,4 +1,4 @@
-#ifndef BOX_H
+ #ifndef BOX_H
 #define BOX_H
 
 struct Box {

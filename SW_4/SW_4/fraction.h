@@ -5,7 +5,7 @@
 
 struct Fraction {
     int _numerator;   // числитель
-    int _denominator; // знаменатель
+    int _denominator; // знаменатель 
 
     Fraction();
     Fraction(int numerator, int denominator);

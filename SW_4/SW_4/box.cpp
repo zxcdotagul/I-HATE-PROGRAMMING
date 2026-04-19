@@ -5,7 +5,7 @@
 void writeToFile(const char* fileName, const struct Box& box) {
     std::ofstream file(fileName, std::ios::binary);
     if (!file.is_open()) {
-        return;
+        return; 
     }
 
     file.write(reinterpret_cast<const char*>(&box._len), sizeof(box._len));
