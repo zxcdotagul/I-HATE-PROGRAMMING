@@ -1,8 +1,6 @@
 #include "box.h"
 #include <cstdio>
 
-
-
 Box::Box() : len(10), width(10), height(10) {
     calculateVolume();
 }
@@ -19,8 +17,6 @@ void Box::calculateVolume() {
     volume = len * width * height;
 }
 
-
-
 std::ostream& operator<<(std::ostream& os, const Box& box) {
     os << "len = " << box.len
         << ", width = " << box.width
@@ -29,11 +25,9 @@ std::ostream& operator<<(std::ostream& os, const Box& box) {
     return os;
 }
 
- 
-
 void writeToFile(const char* fileName, const struct Box& box) {
-    FILE* file = nullptr;
-    if (fopen_s(&file, fileName, "wb") == 0 && file != nullptr) {
+    FILE* file = fopen(fileName, "wb");
+    if (file != nullptr) {
         fwrite(&box, sizeof(Box), 1, file);
         fclose(file);
     }
@@ -41,10 +35,10 @@ void writeToFile(const char* fileName, const struct Box& box) {
 
 void readFromFile(const char* fileName, struct Box* box) {
     if (fileName == nullptr || box == nullptr) {
-        return; 
+        return;
     }
-    FILE* file = nullptr;
-    if (fopen_s(&file, fileName, "rb") == 0 && file != nullptr) {
+    FILE* file = fopen(fileName, "rb");
+    if (file != nullptr) {
         fread(box, sizeof(Box), 1, file);
         fclose(file);
     }
