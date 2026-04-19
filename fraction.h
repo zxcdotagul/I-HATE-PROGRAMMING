@@ -2,7 +2,7 @@
 #define FRACTION_H
 
 #include <iostream>
- 
+
 struct Fraction {
     int _numerator;
     int _denominator;

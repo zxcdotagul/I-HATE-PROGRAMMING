@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-struct Box { 
+struct Box {
     int len;
     int width;
     int height;
