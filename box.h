@@ -8,10 +8,12 @@ struct Box {
     int width;
     int height;
     int volume;
+    int color;
+    int nameBox;
 
     Box();
     Box(int value);
-    Box(int l, int w, int h);
+    Box(int len, int width, int height);
 
     void calculateVolume();
 };

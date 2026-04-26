@@ -1,15 +1,17 @@
 #include "box.h"
 #include <cstdio>
 
-Box::Box() : len(10), width(10), height(10) {
+static int nextId = 1;
+
+Box::Box() : len(10), width(10), height(10), color(0), nameBox(nextId++) {
     calculateVolume();
 }
 
-Box::Box(int value) : len(value), width(value), height(value) {
+Box::Box(int value) : len(value), width(value), height(value), color(0), nameBox(nextId++) {
     calculateVolume();
 }
 
-Box::Box(int len, int width, int height) : len(len), width(width), height(height) {
+Box::Box(int len, int width, int height) : len(len), width(width), height(height), color(0), nameBox(nextId++) {
     calculateVolume();
 }
 
@@ -18,10 +20,7 @@ void Box::calculateVolume() {
 }
 
 std::ostream& operator<<(std::ostream& os, const Box& box) {
-    os << "len = " << box.len
-        << ", width = " << box.width
-        << ", height = " << box.height
-        << ", volume = " << box.volume << "\n";
+    os << "[" << box.nameBox << "] = {" << box.height << ", " << box.len << ", " << box.width << "} = " << box.volume;
     return os;
 }
 
