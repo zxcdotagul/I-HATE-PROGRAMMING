@@ -4,12 +4,12 @@
 #include <iostream>
 
 struct Box {
-    int len;
-    int width;
-    int height;
-    int volume;
-    int color;
-    int nameBox;
+    int _len;
+    int _width;
+    int _height;
+    int _volume;
+    int _color;
+    int _nameBox;
 
     Box();
     Box(int value);
@@ -18,9 +18,10 @@ struct Box {
     void calculateVolume();
 };
 
-std::ostream& operator<<(std::ostream& os, const Box& box);
+
 
 void writeToFile(const char* fileName, const struct Box& box);
 void readFromFile(const char* fileName, struct Box* box);
+void readFromFile(const char* fileName, Box& box);  
 
-#endif // BOX_H
+#endif

@@ -3,24 +3,24 @@
 
 static int nextId = 1;
 
-Box::Box() : len(10), width(10), height(10), color(0), nameBox(nextId++) {
+Box::Box() : _len(10), _width(10), _height(10), _color(0), _nameBox(nextId++) {
     calculateVolume();
 }
 
-Box::Box(int value) : len(value), width(value), height(value), color(0), nameBox(nextId++) {
+Box::Box(int value) : _len(value), _width(value), _height(value), _color(0), _nameBox(nextId++) {
     calculateVolume();
 }
 
-Box::Box(int len, int width, int height) : len(len), width(width), height(height), color(0), nameBox(nextId++) {
+Box::Box(int len, int width, int height) : _len(len), _width(width), _height(height), _color(0), _nameBox(nextId++) {
     calculateVolume();
 }
 
 void Box::calculateVolume() {
-    volume = len * width * height;
+    _volume = _len * _width * _height;
 }
-
+std::ostream& operator<<(std::ostream& os, const Box& box);
 std::ostream& operator<<(std::ostream& os, const Box& box) {
-    os << "[" << box.nameBox << "] = {" << box.height << ", " << box.len << ", " << box.width << "} = " << box.volume;
+    os << "[" << box._nameBox << "] = {" << box._height << ", " << box._len << ", " << box._width << "} = " << box._volume;
     return os;
 }
 
@@ -41,4 +41,9 @@ void readFromFile(const char* fileName, struct Box* box) {
         fread(box, sizeof(Box), 1, file);
         fclose(file);
     }
+}
+
+
+void readFromFile(const char* fileName, Box& box) {
+    readFromFile(fileName, &box);
 }
