@@ -5,7 +5,7 @@
 #include <iomanip>
 #include <fstream>
 
-// Функция получения текущего времени
+
 double getTime(meas unit) {
     auto now = std::chrono::high_resolution_clock::now();
     auto duration = now.time_since_epoch();
@@ -24,7 +24,7 @@ double getTime(meas unit) {
     }
 }
 
-// Запись строки в файл (современная версия без C4996)
+
 void writeStringToFile(const std::string& fileName, const std::string& data) {
     std::ofstream file(fileName, std::ios::app);
     if (file.is_open()) {
@@ -33,19 +33,19 @@ void writeStringToFile(const std::string& fileName, const std::string& data) {
     }
 }
 
-// Конвертация double в строку
+
 std::string convertDoubleToString(double number) {
     std::ostringstream oss;
     oss << std::fixed << std::setprecision(2) << number;
     return oss.str();
 }
 
-// Конвертация int в строку
+
 std::string convertIntToString(int number) {
     return std::to_string(number);
 }
 
-// Заполнение массива случайными числами (современный генератор)
+
 void randomFillArr(int* arr, int size, int min, int max) {
     static std::random_device rd;
     static std::mt19937 gen(rd());

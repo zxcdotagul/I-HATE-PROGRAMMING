@@ -3,7 +3,7 @@
 
 #include <string>
 
-// Перечисление для единиц измерения времени
+
 enum class meas {
     milli = 1,
     micro = 2,
@@ -11,7 +11,7 @@ enum class meas {
     pico = 4
 };
 
-// Вспомогательные функции
+
 double getTime(meas unit);
 void writeStringToFile(const std::string& fileName, const std::string& data);
 std::string convertDoubleToString(double number);

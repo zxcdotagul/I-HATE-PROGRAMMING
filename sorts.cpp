@@ -2,12 +2,12 @@
 #include <algorithm>
 #include <cstring>
 
-// Компаратор для сортировки по возрастанию
+
 bool ascending(int a, int b) {
     return a < b;
 }
 
-// 1. Пузырьковая сортировка
+
 void bubbleSort(int* ar, int size, bool (*comp)(int, int)) {
     for (int i = 0; i < size - 1; i++) {
         bool swapped = false;
@@ -21,12 +21,12 @@ void bubbleSort(int* ar, int size, bool (*comp)(int, int)) {
     }
 }
 
-// 2. Сортировка выбором
-void selectionSort(int* ar, int size, bool (*comp)(int, int)) {
-    for (int i = 0; i < size - 1; i++) {
+
+void selectionSort(int* ar, unsigned int size, bool ascending) {
+    for (unsigned int i = 0; i < size - 1; i++) {
         int extremeIdx = i;
-        for (int j = i + 1; j < size; j++) {
-            if (comp(ar[j], ar[extremeIdx])) {
+        for (unsigned int j = i + 1; j < size; j++) {
+            if (ascending ? (ar[j] < ar[extremeIdx]) : (ar[j] > ar[extremeIdx])) {
                 extremeIdx = j;
             }
         }
@@ -36,7 +36,7 @@ void selectionSort(int* ar, int size, bool (*comp)(int, int)) {
     }
 }
 
-// 3. Сортировка вставками
+
 void insertionSort(int* ar, int size, bool (*comp)(int, int)) {
     for (int i = 1; i < size; i++) {
         int key = ar[i];
@@ -49,7 +49,7 @@ void insertionSort(int* ar, int size, bool (*comp)(int, int)) {
     }
 }
 
-// Вспомогательная функция для слияния
+
 void merge(int* ar, int left, int mid, int right, bool (*comp)(int, int)) {
     int leftSize = mid - left + 1;
     int rightSize = right - mid;
@@ -79,7 +79,7 @@ void merge(int* ar, int left, int mid, int right, bool (*comp)(int, int)) {
     delete[] rightArr;
 }
 
-// Рекурсивная сортировка слиянием
+
 void mergeSortRecursive(int* ar, int left, int right, bool (*comp)(int, int)) {
     if (left < right) {
         int mid = left + (right - left) / 2;
@@ -89,12 +89,12 @@ void mergeSortRecursive(int* ar, int left, int right, bool (*comp)(int, int)) {
     }
 }
 
-// 4. Сортировка слиянием
+
 void mergeSort(int* ar, int size, bool (*comp)(int, int)) {
     mergeSortRecursive(ar, 0, size - 1, comp);
 }
 
-// Разбиение для быстрой сортировки
+
 int partition(int* ar, int left, int right, bool (*comp)(int, int)) {
     int pivot = ar[right];
     int i = left - 1;
@@ -109,7 +109,7 @@ int partition(int* ar, int left, int right, bool (*comp)(int, int)) {
     return i + 1;
 }
 
-// Рекурсивная быстрая сортировка
+
 void quickSortRecursive(int* ar, int left, int right, bool (*comp)(int, int)) {
     if (left < right) {
         int pi = partition(ar, left, right, comp);
@@ -118,12 +118,12 @@ void quickSortRecursive(int* ar, int left, int right, bool (*comp)(int, int)) {
     }
 }
 
-// 5. Быстрая сортировка
+
 void quickSort(int* ar, int size, bool (*comp)(int, int)) {
     quickSortRecursive(ar, 0, size - 1, comp);
 }
 
-// 6. Сортировка Шелла
+
 void sortShell(int* ar, int size, bool (*comp)(int, int)) {
     for (int gap = size / 2; gap > 0; gap /= 2) {
         for (int i = gap; i < size; i++) {
@@ -137,7 +137,7 @@ void sortShell(int* ar, int size, bool (*comp)(int, int)) {
     }
 }
 
-// 7. Сортировка подсчётом
+
 void countSort(int* ar, int size, bool (*comp)(int, int)) {
     if (size <= 1) return;
 
