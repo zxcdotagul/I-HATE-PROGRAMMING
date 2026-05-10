@@ -1,0 +1,21 @@
+#ifndef FONT_VERDANA_8_H
+#define FONT_VERDANA_8_H
+
+#ifndef FONT_TYPE_MONOSPACED
+#define FONT_TYPE_MONOSPACED            0
+#endif
+
+#ifndef FONT_TYPE_PROPORTIONAL
+#define FONT_TYPE_PROPORTIONAL          1
+#endif
+
+#define FONT_VERDANA_8_LENGTH           96
+#define FONT_VERDANA_8_START_CHAR       32
+#define FONT_VERDANA_8_CHAR_WIDTH       15
+#define FONT_VERDANA_8_CHAR_HEIGHT      16
+#define FONT_VERDANA_8_FONT_TYPE        (FONT_TYPE_MONOSPACED)
+#define FONT_VERDANA_8_ARRAY_LENGTH     (FONT_VERDANA_8_LENGTH * FONT_VERDANA_8_CHAR_HEIGHT * 2)
+
+extern const unsigned char verdana_8_font[FONT_VERDANA_8_ARRAY_LENGTH];
+
+#endif 
